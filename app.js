@@ -3,36 +3,30 @@ var API="https://script.google.com/macros/s/AKfycbyfI3U5MOglb3ZAuK7056Xd2jrr7BCn
 
 function login(){
 
-var usuario=document.getElementById("user").value;
-var password=document.getElementById("pass").value;
+var usuario = document.getElementById("user").value;
+var password = document.getElementById("pass").value;
 
 fetch(API,{
 method:"POST",
-headers:{"Content-Type":"application/json"},
+mode:"no-cors",
+headers:{
+"Content-Type":"text/plain;charset=utf-8"
+},
 body:JSON.stringify({
 accion:"login",
 usuario:usuario,
 password:password
 })
 })
-.then(r=>r.json())
-.then(res=>{
-
-if(res.status){
-
-document.querySelector(".login").style.display="none";
-
+.then(()=>{
 dashboard();
-
-}else{
-
-alert("Usuario incorrecto");
-
-}
-
+})
+.catch(()=>{
+alert("Error conectando con el servidor");
 });
 
 }
+
 
 function dashboard(){
 
