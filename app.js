@@ -8,7 +8,16 @@ window.location.href = "index.html"
 
 }
 
+
+// esperar que cargue el DOM
+
+document.addEventListener("DOMContentLoaded", function(){
+
 document.getElementById("usuarioNombre").innerText = usuario
+
+cargarVista("inicio")
+
+})
 
 
 
@@ -24,6 +33,7 @@ if(vista === "inicio"){
 titulo.innerText = "Dashboard"
 
 contenedor.innerHTML = `
+
 <div class="cards">
 
 <div class="card">
@@ -42,9 +52,12 @@ contenedor.innerHTML = `
 </div>
 
 </div>
+
 `
 
 }
+
+
 
 if(vista === "procedimientos"){
 
@@ -64,9 +77,8 @@ contenedor.innerHTML = `
 
 <button onclick="subirProcedimiento()">Guardar</button>
 
-`
+<br><br>
 
-}
 <table>
 
 <tr>
@@ -84,9 +96,12 @@ contenedor.innerHTML = `
 </tr>
 
 </table>
+
 `
 
 }
+
+
 
 if(vista === "versiones"){
 
@@ -98,15 +113,19 @@ contenedor.innerHTML = `
 
 }
 
+
+
 if(vista === "buscador"){
 
 titulo.innerText = "Buscador"
 
 contenedor.innerHTML = `
-<input placeholder="Buscar procedimiento">
+<input id="busqueda" placeholder="Buscar procedimiento" onkeyup="buscar()">
 `
 
 }
+
+
 
 if(vista === "usuarios"){
 
@@ -117,6 +136,8 @@ contenedor.innerHTML = `
 `
 
 }
+
+
 
 if(vista === "config"){
 
@@ -131,10 +152,6 @@ contenedor.innerHTML = `
 }
 
 
-// cargar dashboard al iniciar
-
-cargarVista("inicio")
-
 
 // cerrar sesión
 
@@ -145,6 +162,11 @@ localStorage.removeItem("usuarioActivo")
 window.location.href = "index.html"
 
 }
+
+
+
+// subir procedimiento
+
 function subirProcedimiento(){
 
 let codigo = document.getElementById("codigo").value
@@ -174,6 +196,11 @@ alert("Procedimiento registrado")
 })
 
 }
+
+
+
+// buscador
+
 function buscar(){
 
 let filtro = document.getElementById("busqueda").value.toLowerCase()
