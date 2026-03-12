@@ -14,38 +14,40 @@
 
 <body>
 
-<div class="container">
+<div class="login-container">
 
-<div class="left-panel">
+<div class="left-side">
 
-<img src="logo_gobierno.png" class="logo">
+<img src="logo_gobierno.png" class="logo-gob">
 
 <h1>ERP Sistemas</h1>
 
 <p>
-Sistema de Gestión de Procedimientos<br>
-Instituto de Educación Digital del Estado de Puebla
+Sistema de Gestión Documental<br>
+Manual de Procedimientos
 </p>
+
+<span>
+Instituto de Educación Digital del Estado de Puebla
+</span>
 
 </div>
 
-<div class="right-panel">
+<div class="right-side">
 
-<div class="login-box">
+<div class="login-card">
 
-<img src="logo_iedep.png" class="logo-small">
+<img src="logo_iedep.png" class="logo-iedep">
 
 <h2>Acceso al Sistema</h2>
 
-<form>
+<form id="loginForm">
 
-<label>Usuario</label>
-<input type="text" placeholder="Ingrese su usuario">
+<input type="text" placeholder="Usuario" required>
 
-<label>PIN de Usuario</label>
-<input type="password" placeholder="Ingrese su PIN">
+<input type="password" placeholder="PIN de usuario" required>
 
-<button>Ingresar</button>
+<button type="submit">Ingresar</button>
 
 </form>
 
@@ -54,6 +56,8 @@ Instituto de Educación Digital del Estado de Puebla
 </div>
 
 </div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
