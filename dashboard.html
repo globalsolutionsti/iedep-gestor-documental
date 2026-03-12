@@ -24,19 +24,19 @@
 
 <ul>
 
-<li onclick="mostrarVista('dashboard')">📊 Dashboard</li>
-<li onclick="mostrarVista('procedimientos')">📂 Procedimientos</li>
-<li onclick="mostrarVista('versiones')">📑 Versiones</li>
-<li onclick="mostrarVista('buscador')">🔎 Buscador</li>
-<li onclick="mostrarVista('usuarios')">👥 Usuarios</li>
-<li onclick="mostrarVista('config')">⚙ Configuración</li>
+<li onclick="cargarVista('inicio')">📊 Dashboard</li>
+<li onclick="cargarVista('procedimientos')">📂 Procedimientos</li>
+<li onclick="cargarVista('versiones')">📑 Versiones</li>
+<li onclick="cargarVista('buscador')">🔎 Buscador</li>
+<li onclick="cargarVista('usuarios')">👥 Usuarios</li>
+<li onclick="cargarVista('config')">⚙ Configuración</li>
 
 </ul>
 
 </aside>
 
 
-<!-- CONTENIDO -->
+<!-- CONTENIDO PRINCIPAL -->
 
 <main class="main">
 
@@ -55,88 +55,11 @@
 </header>
 
 
-<!-- DASHBOARD -->
+<!-- CONTENIDO DINÁMICO -->
 
-<section id="vista-dashboard" class="vista">
+<section id="contenido">
 
-<div class="cards">
-
-<div class="card">
-<h3>Procedimientos</h3>
-<p>120</p>
-</div>
-
-<div class="card">
-<h3>En revisión</h3>
-<p>8</p>
-</div>
-
-<div class="card">
-<h3>Aprobados</h3>
-<p>95</p>
-</div>
-
-<div class="card">
-<h3>Usuarios</h3>
-<p>15</p>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- PROCEDIMIENTOS -->
-
-<section id="vista-procedimientos" class="vista" style="display:none">
-
-<h2>Gestión de Procedimientos</h2>
-
-<p>Aquí irá el gestor documental.</p>
-
-</section>
-
-
-<!-- VERSIONES -->
-
-<section id="vista-versiones" class="vista" style="display:none">
-
-<h2>Control de Versiones</h2>
-
-<p>Historial de cambios.</p>
-
-</section>
-
-
-<!-- BUSCADOR -->
-
-<section id="vista-buscador" class="vista" style="display:none">
-
-<h2>Buscador</h2>
-
-<input placeholder="Buscar procedimiento">
-
-</section>
-
-
-<!-- USUARIOS -->
-
-<section id="vista-usuarios" class="vista" style="display:none">
-
-<h2>Gestión de Usuarios</h2>
-
-<p>Administración de usuarios.</p>
-
-</section>
-
-
-<!-- CONFIG -->
-
-<section id="vista-config" class="vista" style="display:none">
-
-<h2>Configuración</h2>
-
-<p>Configuración del sistema.</p>
+<!-- Aquí se cargará todo con JS -->
 
 </section>
 
