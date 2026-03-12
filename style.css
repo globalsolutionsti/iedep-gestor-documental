@@ -1,65 +1,111 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: 'Segoe UI', sans-serif;
+}
 
 body{
-font-family:Arial;
-margin:0;
-background:#f4f6f9;
+height:100vh;
+background:#f4f4f4;
 }
 
-.header{
-background:#691c32;
+.container{
+display:flex;
+height:100vh;
+}
+
+/* PANEL IZQUIERDO */
+
+.left-panel{
+width:50%;
+background:#0D1B2A;
 color:white;
-padding:15px;
-font-size:20px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:40px;
 }
 
-.sidebar{
-position:fixed;
-width:220px;
-background:#0c2340;
-height:100%;
-color:white;
+.left-panel h1{
+font-size:40px;
+margin-top:20px;
 }
 
-.sidebar a{
-display:block;
-padding:12px;
-color:white;
-text-decoration:none;
+.left-panel p{
+margin-top:10px;
+font-size:18px;
+opacity:0.8;
 }
 
-.sidebar a:hover{
-background:#a5162b;
-}
-
-.content{
-margin-left:220px;
-padding:30px;
-}
-
-.card{
-background:white;
-padding:20px;
+.logo{
+width:120px;
 margin-bottom:20px;
-box-shadow:0 2px 6px rgba(0,0,0,.1);
 }
 
-.grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px;
+/* PANEL DERECHO */
+
+.right-panel{
+width:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#F4F4F4;
 }
 
-table{
-width:100%;
-border-collapse:collapse;
+/* LOGIN BOX */
+
+.login-box{
+background:white;
+padding:40px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+width:350px;
 }
 
-th,td{
+.login-box h2{
+text-align:center;
+margin-bottom:20px;
+color:#7A1E2C;
+}
+
+.logo-small{
+width:100px;
+display:block;
+margin:auto;
+margin-bottom:15px;
+}
+
+form{
+display:flex;
+flex-direction:column;
+}
+
+label{
+margin-top:10px;
+font-weight:600;
+}
+
+input{
 padding:10px;
-border-bottom:1px solid #ddd;
+margin-top:5px;
+border:1px solid #ccc;
+border-radius:6px;
 }
 
-tr:hover{
-background:#f2f2f2;
+button{
+margin-top:20px;
+padding:12px;
+background:#7A1E2C;
+border:none;
+color:white;
+font-size:16px;
+border-radius:6px;
 cursor:pointer;
+}
+
+button:hover{
+background:#5c1420;
 }
