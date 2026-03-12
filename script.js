@@ -1,7 +1,8 @@
-document.getElementById("loginForm").addEventListener("submit",function(e){
+document.getElementById("loginForm").addEventListener("submit", function(e){
 
 e.preventDefault()
 
-alert("Login conectado próximamente con Apps Script")
+// simulación de login correcto
+window.location.href = "dashboard.html"
 
 })
