@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Dashboard | ERP Procedimientos</title>
+<title>ERP Procedimientos</title>
 
 <link rel="stylesheet" href="dashboard.css">
 
@@ -23,11 +23,19 @@
 <h2>ERP</h2>
 
 <ul>
-<li>📊 Inicio</li>
-<li>📂 Documentos</li>
-<li>📝 Versiones</li>
-<li>👥 Usuarios</li>
-<li>⚙ Configuración</li>
+
+<li onclick="cargarVista('inicio')">📊 Dashboard</li>
+
+<li onclick="cargarVista('procedimientos')">📂 Procedimientos</li>
+
+<li onclick="cargarVista('versiones')">📑 Versiones</li>
+
+<li onclick="cargarVista('buscador')">🔎 Buscador</li>
+
+<li onclick="cargarVista('usuarios')">👥 Usuarios</li>
+
+<li onclick="cargarVista('config')">⚙ Configuración</li>
+
 </ul>
 
 </aside>
@@ -38,7 +46,7 @@
 
 <header>
 
-<h1>Dashboard</h1>
+<h1 id="titulo">Dashboard</h1>
 
 <div class="usuario">
 
@@ -50,53 +58,9 @@
 
 </header>
 
-<section class="cards">
+<section id="contenido">
 
-<div class="card">
-<h3>Procedimientos</h3>
-<p>120</p>
-</div>
-
-<div class="card">
-<h3>En revisión</h3>
-<p>8</p>
-</div>
-
-<div class="card">
-<h3>Aprobados</h3>
-<p>95</p>
-</div>
-
-<div class="card">
-<h3>Usuarios</h3>
-<p>15</p>
-</div>
-
-</section>
-
-<section class="tabla">
-
-<h2>Procedimientos recientes</h2>
-
-<table>
-
-<tr>
-<th>Código</th>
-<th>Nombre</th>
-<th>Área</th>
-<th>Versión</th>
-<th>Estado</th>
-</tr>
-
-<tr>
-<td>PR-001</td>
-<td>Control Académico</td>
-<td>Académico</td>
-<td>v2.0</td>
-<td>Aprobado</td>
-</tr>
-
-</table>
+<!-- aquí se cargan las vistas -->
 
 </section>
 
@@ -104,7 +68,7 @@
 
 </div>
 
-<script src="dashboard.js"></script>
+<script src="app.js"></script>
 
 </body>
 
