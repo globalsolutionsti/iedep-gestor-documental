@@ -1,46 +1,63 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sistema Gestión Documental IEDEP</title>
+<title>ERP Sistemas | IEDEP</title>
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/styles.css">
 
 </head>
 
 <body>
 
-<div class="header">
+<div class="container">
 
-Sistema de Gestión Documental IEDEP
+    <!-- PANEL IZQUIERDO -->
+    <div class="left-panel">
+
+        <img src="assets/logo_puebla.png" class="logo">
+
+        <h1>ERP Sistemas</h1>
+
+        <p>
+        Sistema de Gestión de Procedimientos
+        <br>
+        Instituto de Educación Digital del Estado de Puebla
+        </p>
+
+    </div>
+
+
+    <!-- PANEL DERECHO -->
+    <div class="right-panel">
+
+        <div class="login-box">
+
+            <img src="assets/logo_iedep.png" class="logo-small">
+
+            <h2>Acceso al Sistema</h2>
+
+            <form id="loginForm">
+
+                <label>Usuario</label>
+                <input type="text" id="usuario" placeholder="Ingrese su usuario">
+
+                <label>PIN de Usuario</label>
+                <input type="password" id="pin" placeholder="Ingrese su PIN">
+
+                <button type="submit">Ingresar</button>
+
+            </form>
+
+        </div>
+
+    </div>
 
 </div>
 
-<div class="sidebar">
-
-<a onclick="dashboard()">Dashboard</a>
-<a onclick="tareas()">Tareas</a>
-<a onclick="documentos()">Gestor Documental</a>
-
-</div>
-
-<div class="content" id="contenido">
-
-<div class="login">
-
-<h2>Login</h2>
-
-<input id="user" placeholder="Correo">
-<input id="pass" type="password">
-
-<button onclick="login()">Ingresar</button>
-
-</div>
-
-</div>
-
-<script src="app.js"></script>
+<script src="js/login.js"></script>
 
 </body>
 </html>
