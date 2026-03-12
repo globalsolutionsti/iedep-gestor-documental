@@ -51,6 +51,22 @@ if(vista === "procedimientos"){
 titulo.innerText = "Procedimientos"
 
 contenedor.innerHTML = `
+
+<h3>Nuevo procedimiento</h3>
+
+<input id="codigo" placeholder="Código">
+
+<input id="nombre" placeholder="Nombre">
+
+<input id="area" placeholder="Área">
+
+<input type="file" id="archivo">
+
+<button onclick="subirProcedimiento()">Guardar</button>
+
+`
+
+}
 <table>
 
 <tr>
@@ -127,5 +143,55 @@ function cerrarSesion(){
 localStorage.removeItem("usuarioActivo")
 
 window.location.href = "index.html"
+
+}
+function subirProcedimiento(){
+
+let codigo = document.getElementById("codigo").value
+let nombre = document.getElementById("nombre").value
+let area = document.getElementById("area").value
+
+fetch("https://script.google.com/macros/s/AKfycbxGKJHg5a61nTBZUA5M1H_zqcEQ7cpOo6i7SeokD1SHzw3C1AW1N327OIznAfIS_vv0bw/exec",{
+
+method:"POST",
+
+body:JSON.stringify({
+
+codigo:codigo,
+nombre:nombre,
+area:area,
+version:"1.0",
+usuario:localStorage.getItem("usuarioActivo")
+
+})
+
+})
+.then(r=>r.json())
+.then(data=>{
+
+alert("Procedimiento registrado")
+
+})
+
+}
+function buscar(){
+
+let filtro = document.getElementById("busqueda").value.toLowerCase()
+
+let filas = document.querySelectorAll("table tr")
+
+filas.forEach(f=>{
+
+if(f.innerText.toLowerCase().includes(filtro)){
+
+f.style.display=""
+
+}else{
+
+f.style.display="none"
+
+}
+
+})
 
 }
